@@ -50,6 +50,6 @@ class Auth0Controller extends Controller
             \Auth::login($user, $service->rememberUser());
         }
 
-        return \Redirect::intended('/');
+        return \Redirect::intended(URL::previous());
     }
 }
