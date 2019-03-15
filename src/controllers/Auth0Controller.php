@@ -51,6 +51,6 @@ class Auth0Controller extends Controller
         }
 
         $redirect = (URL::previous() === route('login')) ? '/' : URL::previous();
-        return \Redirect::intended($redirect);
+        return \Redirect::back();
     }
 }
